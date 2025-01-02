@@ -33,7 +33,7 @@ namespace WinFormApp_250102
                 MessageBox.Show("File successfully read!\nFile Path: " + filePath, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // 파일 내용을 표시
-                string fileContent = string.Join(Environment.NewLine, fileLines);
+                string fileContent = string.Join(Environment.NewLine, fileValues);
                 MessageBox.Show("File Content:\n" + fileContent, "File Content", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
