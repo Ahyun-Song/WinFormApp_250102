@@ -31,6 +31,10 @@ namespace WinFormApp_250102
             {
                 // 파일을 정상적으로 읽었을 때 출력
                 MessageBox.Show("File successfully read!\nFile Path: " + filePath, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // 파일 내용을 표시
+                string fileContent = string.Join(Environment.NewLine, fileLines);
+                MessageBox.Show("File Content:\n" + fileContent, "File Content", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -100,6 +104,10 @@ namespace WinFormApp_250102
             catch (Exception ex)
             {
                 MessageBox.Show("An unexpected error occurred:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MessageBox.Show("File reading process completed.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             return false; // 실패
